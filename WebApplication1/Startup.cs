@@ -29,6 +29,11 @@ namespace WebApplication1
             app.UseMvc(routes =>
             {
                  routes.MapRoute(
+                    name: "movies",
+                    template: "movies/{action}",
+                    defaults: new { Controller = "Movies" });
+
+                 routes.MapRoute(
                     name: "calculator",
                     template: "Calculator/{action}/{number:int}",
                     defaults: new { Controller = "Calculator" });
